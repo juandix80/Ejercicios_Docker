@@ -1,0 +1,19 @@
+Cambiamos en el package.json:
+ "scripts": {
+    "start": "node chat/index.js"
+  },
+
+1 - Instrucción para crear un contenedor de DOCKER con el TERMINAL:
+docker build -t node-chat .
+
+2 - Para ejecutar la aplicación docker, ponemos en el Terminal:
+docker run -d -p 8080:8080 node-chat
+
+3- Para verlo:
+docker ps
+
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                    NAMES
+97124cb26bd6   node-chat   "docker-entrypoint.s…"   8 seconds ago   Up 6 seconds   0.0.0.0:8080->8080/tcp   stoic_shannon 
+
+4- Para pararlo:
+docker stop 97124cb26bd6
